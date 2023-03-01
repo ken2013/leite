@@ -1,0 +1,45 @@
+<html>
+<title>
+testPage
+</title>
+<body>
+hello,world
+</br>
+</body>
+<button type="button" id='jbtn' onClick='wpost()'>Click Me!</button>
+<script type="text/javascript">
+//alert('King of the world!')
+function jumpwithpara()
+{
+	window.location.href="r2.html?hello2=world2";
+}
+
+function mypost(url, params) { 
+    // 创建form
+    var temp_form = document.createElement("form");
+    // 设置form
+    temp_form .action = url;      
+    temp_form .target = "_self";
+    temp_form .method = "post";      
+    temp_form .style.display = "none";
+    // 处理需要传递的参数 
+    for (var x in params) { 
+        var opt = document.createElement("textarea");      
+        opt.name = x;      
+        opt.value = params[x];      
+        temp_form .appendChild(opt);      
+    }      
+    document.body.appendChild(temp_form);
+    // 提交表单      
+    temp_form .submit();     
+}
+function wpost()
+{
+var  url='r2.html?'+"test.action";
+     mypost(url,{
+	 param1:'naja',
+     param2:'dancer'
+     }); 
+}	 
+</script>
+</html>

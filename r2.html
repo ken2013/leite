@@ -1,0 +1,52 @@
+<html>
+<title>
+testPage
+</title>
+<body>
+hello,world 2ed!!
+</body>
+<script type="text/javascript">
+//alert('King of the world!')
+function GetUrlPara()
+{
+	alert('hello')
+    var url = document.location.toString();
+	alert(url)
+    //var arrUrl = url.split("?");
+    //var para = arrUrl[1];
+	//alert(para)
+	
+	let urlStr = url.split('?')[1]
+	let paramsArr = urlStr.split('&')
+    for(let i = 0,len = paramsArr.length;i < len;i++){
+        // 再通过 = 将每一个参数分割为 key:value 的形式
+        let arr = paramsArr[i].split('=')
+        alert(arr[0])
+		alert(arr[1])
+    }	
+
+    //return para;
+}
+function PostPara()
+{
+	alert('hello post')
+    var url = document.location.toString();
+	alert(url)
+    //var arrUrl = url.split("?");
+    //var para = arrUrl[1];
+	//alert(para)
+	
+	let urlStr = url.split('?')[1]
+	let paramsArr = urlStr.split('&')
+    for(let i = 0,len = paramsArr.length;i < len;i++){
+        // 再通过 = 将每一个参数分割为 key:value 的形式
+        let arr = paramsArr[i].split('=')
+        alert(arr[0])
+		alert(arr[1])
+    }	
+
+    //return para;
+}
+window.onload = GetUrlPara;
+</script>
+</html>
